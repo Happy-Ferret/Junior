@@ -36,8 +36,15 @@ ___________________*/
 
 _.prototype = {
 
-	junior_rainbow: function () {
-			                  }
+	junior_rainbow: function (){
 
-			
+
+				                	},
+
+	junior_rainbowBG: function () {
+					this.e.style.color = 'transparent';
+					this.e.style.background = 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)';
+					return this;
+							}
+
 };
