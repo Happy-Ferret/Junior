@@ -42,8 +42,12 @@ _.prototype = {
 				                	},
 
 	junior_rainbowBG: function () {
-					this.e.style.color = 'transparent';
 					this.e.style.background = 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)';
+					return this;
+							},
+
+	junior_hexBG: function (colour) {
+					this.e.style.background = colour;
 					return this;
 							}
 
