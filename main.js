@@ -49,6 +49,10 @@ _.prototype = {
 	junior_hexBG: function (colour) {
 					this.e.style.background = colour;
 					return this;
-							}
+							},
+	junior_txt: function (colour) {
+                                        this.e.style.color = colour;
+                                        return this;
+                                                        }
 
 };
