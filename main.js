@@ -17,14 +17,13 @@ function _(id) {
 
 	if (id) {
 		
-		// return a new _ object if we're in the wrong scope
+		// If in wrong scope, return a new _ object.
 		if (window === this) {
 			return new _(id);
 		}
 
-		// We're in the correct object scop:
-		// Init our element object and return the object
-		this.e = document.getElementById(id);
+		// Initialize element object and return the object
+		this.e = document.getElementsByClassName(id);
 		return this;
 	} else {
 		return about;
@@ -42,16 +41,22 @@ _.prototype = {
 				                	},
 
 	junior_rainbowBG: function () {
-					this.e.style.background = 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)';
+					for(var i = 0; i < this.e.length; i++) {
+					this.e[i].style.background = 'linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet)';
+					}
 					return this;
 							},
 
 	junior_hexBG: function (colour) {
-					this.e.style.background = colour;
+					for(var i = 0; i < this.e.length; i++) {
+					this.e[i].style.background = colour;
+					}
 					return this;
 							},
 	junior_txt: function (colour) {
-                                        this.e.style.color = colour;
+					for(var i = 0; i < this.e.length; i++) {
+                                        this.e[i].style.color = colour;
+					}
                                         return this;
                                                         }
 
